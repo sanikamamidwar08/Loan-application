@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="addNewCaptcha()">
+    <form name="registerform" action="thanku.html" onsubmit= "returnformValidation()">
+        <h2>Loan Application Form</h2>
+        <label for="">Enter your Name</label>
+        <input type="text" name="name" required>
+        <br><br>
+        <label for="">Enter your Email:</label>
+        <input type="email" name="email" required>
+        <br><br>
+        <label for="">Enter your pan number</label>
+        <input type="pancard" name="pancard" required>
+        <br><br>
+
+        <label for="loanAmount">Loan Amount:</label>
+            <input type="number" id="loanAmount" required>
+            <span id="amountInWords"></span>
+            <span class="error" ></span>
+
+
+        <label id="captcha"></label>
+        <input type="text"><br><br>
+        <button type="button" onclick="addNewCaptcha()">Refresh captcha</button>
+        <button type="submit">Sumbit</button>
+    </form>
+   
+    <script src="index.js"></script>
+</body>
+</html>
